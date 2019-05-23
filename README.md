@@ -14,8 +14,13 @@ CIBERSORT option
 - signature     : LM22
 - permutations  : 100
 - data          : https://gdac.broadinstitute.org/ - HNSC - data browse - mRNAseq - illuminahiseq_rnaseqv2-RSEM_genes_normalized
-1-1. rotate table to analyze data in R survival package
+- DISABLE quantile normalization : TRUE
+
+code 1-1. rotate table to analyze data in R ConsensusClusterPlus package
 python code 1_1 : testmake.py
 - input   = CIBERSORT_LM22_sep.txt
 - output  = CIBERSORT_LM22.sep_T.txt
 
+4. R에서 위 output을 넣어 clustering
+5. 클러스터링 결과의 heatmap 확인
+6. 최적의 k값에서 클러스터링 결과에 따라 itemconsensus의 최댓값인 클러스터# 확인 및 저장
